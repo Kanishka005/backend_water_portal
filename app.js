@@ -10,8 +10,9 @@ const userTrainerRoutes = require('./routes/userTrainers');
 const topicRoutes = require('./routes/topics');
 const topicFileRoutes = require('./routes/topicFiles');
 const locationRoutes = require('./routes/location');
+const cors = require('cors');
 
-
+app.use(cors());
 app.use(express.json());
 
 app.use('/api/v1/users', userRoutes);
